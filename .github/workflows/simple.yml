@@ -1,0 +1,15 @@
+name: build-test
+
+on: [push]
+
+jobs:
+    run-shell-command:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: echo-string
+              run: echo "GH Actions Test"
+            - name: multi-command
+              run: |
+                pip -v
+                npm -v
+
